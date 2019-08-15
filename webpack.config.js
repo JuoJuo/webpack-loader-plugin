@@ -16,6 +16,13 @@ module.exports = {
       {
         test:/\.js$/,
         use:[
+          {
+            loader: "banner-loader.js",
+            options: {
+              // text: '杰哥所有，版权版权',
+              filename: path.resolve(__dirname, 'banner.rc')
+            }
+          },
           'babel-loader2.js',
         ]
       }
