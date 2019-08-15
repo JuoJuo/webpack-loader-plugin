@@ -25,6 +25,17 @@ module.exports = {
           },
           'babel-loader2.js',
         ]
+      },
+      {
+        test: /\.png$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              // filename: '',
+            }
+          },
+        ],
       }
     ]
   },
