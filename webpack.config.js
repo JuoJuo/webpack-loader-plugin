@@ -38,11 +38,21 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              limit: 1024 * 9,
+              limit: 1024 * 2,
             }
           },
         ],
-      }
+      },
+      {
+        test: /\.less$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'less-loader',
+          }
+        ],
+      },
     ]
   },
 };
