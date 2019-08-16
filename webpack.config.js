@@ -1,4 +1,5 @@
 let path = require('path');
+const DonePlugin = require('./src/plugins/DonePlugin.js');
 
 module.exports = {
   mode: 'development',
@@ -55,5 +56,8 @@ module.exports = {
       },
     ]
   },
+  plugins: [
+    new DonePlugin({name:'jack'})
+  ]
 };
 
