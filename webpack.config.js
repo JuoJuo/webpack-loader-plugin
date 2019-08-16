@@ -29,10 +29,16 @@ module.exports = {
       {
         test: /\.png$/,
         use: [
+          // {
+          //   loader: 'file-loader',
+          //   options: {
+          //     // filename: '',
+          //   }
+          // },
           {
-            loader: 'file-loader',
+            loader: 'url-loader',
             options: {
-              // filename: '',
+              limit: 1024 * 9,
             }
           },
         ],
