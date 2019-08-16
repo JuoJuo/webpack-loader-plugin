@@ -1,5 +1,6 @@
 let path = require('path');
 const DonePlugin = require('./src/plugins/DonePlugin.js');
+const AsyncPlugin = require('./src/plugins/AsyncPlugin.js');
 
 module.exports = {
   mode: 'development',
@@ -57,7 +58,8 @@ module.exports = {
     ]
   },
   plugins: [
-    new DonePlugin({name:'jack'})
+    new DonePlugin({name:'jack'}),
+    new AsyncPlugin()
   ]
 };
 
